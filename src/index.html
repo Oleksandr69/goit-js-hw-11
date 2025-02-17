@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME WORK 11</title>
-  </head>
-  <body>
-    <main>
-      <!-- Loads the specified .html file -->
 
-      <p>BINGOO</p>
-    </main>
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+
+  <body>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        <input
+          type="text"
+          name="searchImages"
+          placeholder="Search images..."
+          autofocus
+        />
+      </label>
+
+      <button type="submit" class="btn-search">Search</button>
+    </form>
+
+    <ul class="gallery"></ul>
 
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/pixabay-api.js"></script>
+    <script type="module" src="./js/render-functions.js"></script>
   </body>
 </html>
