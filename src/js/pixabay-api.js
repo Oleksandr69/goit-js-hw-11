@@ -1,12 +1,18 @@
 import axios from 'axios';
+import { messageAllert } from './render-functions';
 
 const axiosFotoSearch = axios.create({});
 
 export function getAllFoto(value) {
+  const searchParams = new URLSearchParams({
+    key: '48882372-89a0cb49e548afa674928e493',
+    q: value,
+    image_type: 'photo',
+    orientation: 'horizontal',
+    safesearch: 'true',
+  });
   return axiosFotoSearch
-    .get(
-      `https://pixabay.com/api/?key=48882372-89a0cb49e548afa674928e493&q=${value}&image_type=photo`
-    )
+    .get(`https://pixabay.com/api/?${searchParams}`)
     .then(res => res.data)
     .catch(error => console.log(error));
 }

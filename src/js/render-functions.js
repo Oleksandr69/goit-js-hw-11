@@ -1,12 +1,18 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const gallery = document.querySelector('.gallery');
 
-export function fotoMaker(imageArr) {
+export function galleryClear() {
   const gallery = document.querySelector('.gallery');
   gallery.textContent = '';
-  console.log(imageArr);
+}
+
+export function fotoMaker(imageArr) {
+  galleryClear();
+  // console.log(imageArr);
   const listImages = imageArr
     .map(
       foto =>
@@ -36,18 +42,32 @@ export function fotoMaker(imageArr) {
                   <p class="gallery-value">${foto.downloads}</p>
                 </div>
               </div>
-              </a>
-          
+              </a>  
         </li>`
     )
     .join(' ');
-  // console.log(listImages);
+
   gallery.insertAdjacentHTML('beforeend', listImages);
+
   const galleryBox = new SimpleLightbox('.gallery-link', {
     captions: true,
     captionsData: 'alt',
     captionDelay: 250,
     captionPosition: 'bottom',
-    /* options */
+  });
+  galleryBox.refresh();
+}
+
+export function messageAllert(messageSnack) {
+  iziToast.show({
+    position: 'topRight',
+    title: 'error',
+    titleColor: 'white',
+    message: messageSnack,
+    messageSize: '24px',
+    messageLineHeight: '24px',
+    messageColor: 'white',
+    backgroundColor: ' #ef4040',
+    theme: 'dark',
   });
 }
