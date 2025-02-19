@@ -7,7 +7,7 @@ const gallery = document.querySelector('.gallery');
 
 export function galleryClear() {
   const gallery = document.querySelector('.gallery');
-  gallery.textContent = '';
+  gallery.innerHTML = '';
 }
 
 export function fotoMaker(imageArr) {
