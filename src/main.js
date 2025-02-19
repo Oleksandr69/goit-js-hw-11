@@ -16,7 +16,7 @@ function fotosSearch(evt) {
   evt.preventDefault();
   // console.log(evt.target.searchImages.value);
   galleryClear();
-  loadMessage.textContent = 'Please wait!';
+  loadMessage.innerHTML = '<span class="loader"></span>';
   const searchValue = evt.target.searchImages.value.trim();
   if (searchValue === '') {
     messageAllert('Enter a search term!');
@@ -33,7 +33,7 @@ function fotosSearch(evt) {
           'Sorry, there are no images matching your search query. Please try again!'
         );
       }
-      loadMessage.textContent = ' ';
+      loadMessage.innerHTML = '';
     })
     .catch(error => {
       messageAllert(`Sorry, ${error}!`);

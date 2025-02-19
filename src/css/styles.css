@@ -1,31 +1,6 @@
-input,
-textarea,
-button {
-  outline: none;
-  border: none;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
-
-.message {
-  margin: 0 auto;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
 /* =========================form============== */
 .feedback-form {
   width: 408px;
@@ -46,7 +21,7 @@ a {
   border: 1px solid #808080;
   border-radius: 4px;
   background: #fff;
-  font-family: 'Montserrat', sans-serif;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -71,7 +46,6 @@ a {
   height: 40px;
   background: #4e75ff;
   /* border-style: none; */
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -118,7 +92,6 @@ a {
 }
 
 p.gallery-info {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -130,7 +103,6 @@ p.gallery-info {
 }
 
 p.gallery-value {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
