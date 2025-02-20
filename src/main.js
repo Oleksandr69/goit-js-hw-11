@@ -33,6 +33,7 @@ function fotosSearch(evt) {
         loadMessage.innerHTML = '';
       })
       .catch(error => {
+        formSearchFotos.reset();
         galleryClear();
         messageAllert(`Sorry, ${error}!`);
       });
